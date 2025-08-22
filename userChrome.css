@@ -1,26 +1,34 @@
+/* Transparency */
 :root {
   --zen-dialog-background: transparent !important;
   --zen-branding-bg: transparent !important;
 }
 
+/* Glass Effect */
 :root {
   --zen-dialog-background: hsla(0, 0%, 100%, 0.08) !important;
 }
 
-/* Immersive Sidebar */
 :root[zen-compact-mode="true"] {
   #titlebar::before {
     background-color: hsla(0, 0%, 100%, 0.08) !important;
   }
-  &:has(#navigator-toolbox[zen-has-hover="true"]) {
-    #zen-appcontent-wrapper {
-      filter: blur(20px) !important;
-    }
+}
+
+/* Immersive Sidebar */
+:root[zen-compact-mode="true"]:has(
+    #navigator-toolbox[zen-has-hover],
+    #navigator-toolbox[movingtab]
+  ) {
+  #zen-appcontent-wrapper {
+    filter: blur(20px) !important;
   }
 }
 
 /* Immersive Popup */
-:root:has(#navigator-toolbox[has-popup-menu]) {
+:root:has(
+  #navigator-toolbox[has-popup-menu]:not(#navigator-toolbox[movingtab])
+) {
   #zen-main-app-wrapper,
   #urlbar {
     filter: blur(20px) !important;
@@ -28,10 +36,16 @@
   }
 }
 
-/* No Margins */
+/* No Navbar */
 #zen-appcontent-navbar-wrapper {
   display: none !important;
 }
+
+#zen-tabbox-wrapper {
+  margin-top: var(--zen-element-separation) !important;
+}
+
+/* No Gaps */ 
 #zen-tabbox-wrapper {
   margin: 0 !important;
 }

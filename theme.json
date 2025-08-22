@@ -1,0 +1,16 @@
+{
+  "immersive_zen": {
+    "id": "immersive_zen",
+    "name": "Immersive Zen",
+    "description": "Blurs the browser when any popup or overlays are visible.",
+    "version": "0.0.1",
+    "author": "notscripterin",
+    "tags": [],
+    "style": "chrome.css",
+    "readme": "README.md",
+    "preferences": "preferences.json",
+    "createdAt": "2024-11-02",
+    "updatedAt": "2025-01-26",
+    "enabled": false
+  }
+}
