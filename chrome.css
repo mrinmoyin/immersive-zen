@@ -1,6 +1,6 @@
 @-moz-document url-prefix("chrome:") {
   /* Transparency */
-  @media (-moz-bool-pref: "immersive_zen.transparency") {
+  @media (-moz-bool-pref: "mod.immersive_zen.transparency") {
     :root {
       --zen-dialog-background: transparent !important;
       --zen-branding-bg: transparent !important;
@@ -8,7 +8,7 @@
   }
 
   /* Glass Effect */
-  @media (-moz-bool-pref: "immersive_zen.glass_effect") {
+  @media (-moz-bool-pref: "mod.immersive_zen.glass_effect") {
     :root {
       --zen-dialog-background: hsla(0, 0%, 100%, 0.08) !important;
     }
@@ -21,7 +21,7 @@
   }
 
   /* Immersive Sidebar */
-  @media (-moz-bool-pref: "immersive_zen.immersive_sidebar") {
+  @media (-moz-bool-pref: "mod.immersive_zen.immersive_sidebar") {
     :root[zen-compact-mode="true"]:has(
         #navigator-toolbox[zen-has-hover],
         #navigator-toolbox[movingtab]
@@ -33,7 +33,7 @@
   }
 
   /* Immersive Popup */
-  @media (-moz-bool-pref: "immersive_zen.immersive_popup") {
+  @media (-moz-bool-pref: "mod.immersive_zen.immersive_popup") {
     :root:has(
       #navigator-toolbox[has-popup-menu]:not(#navigator-toolbox[movingtab])
     ) {
@@ -46,7 +46,7 @@
   }
 
   /* No Navbar */
-  @media (-moz-bool-pref: "immersive_zen.no_navbar") {
+  @media (-moz-bool-pref: "mod.immersive_zen.no_navbar") {
     #zen-appcontent-navbar-wrapper {
       display: none !important;
     }
@@ -57,7 +57,7 @@
   }
 
   /* No Gaps */
-  @media (-moz-bool-pref: "immersive_zen.no_gaps") {
+  @media (-moz-bool-pref: "mod.immersive_zen.no_gaps") {
     #zen-tabbox-wrapper {
       margin: 0 !important;
     }
