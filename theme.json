@@ -1,16 +1,15 @@
 {
-  "immersive_zen": {
-    "id": "immersive_zen",
-    "name": "Immersive Zen",
-    "description": "Adds Immersiveness to Zen Browser.",
-    "version": "0.0.1",
-    "author": "notscripterin",
-    "tags": [],
-    "style": "chrome.css",
-    "readme": "README.md",
-    "preferences": "preferences.json",
-    "createdAt": "2024-11-02",
-    "updatedAt": "2025-01-26",
-    "enabled": false
-  }
+  "id": "86c2be32-f646-4f14-b2c8-549b468aab12",
+  "name": "Immersive Zen",
+  "description": "Adds Immersiveness to Zen Browser.",
+  "homepage": "https://github.com/notscripterin/immersive-zen",
+  "style": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/86c2be32-f646-4f14-b2c8-549b468aab12/chrome.css",
+  "readme": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/86c2be32-f646-4f14-b2c8-549b468aab12/readme.md",
+  "image": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/86c2be32-f646-4f14-b2c8-549b468aab12/image.png",
+  "author": "notscripterin",
+  "version": "1.0.0",
+  "tags": [],
+  "createdAt": "2025-08-22",
+  "updatedAt": "2025-08-22",
+  "preferences": "https://raw.githubusercontent.com/zen-browser/theme-store/main/themes/86c2be32-f646-4f14-b2c8-549b468aab12/preferences.json"
 }
