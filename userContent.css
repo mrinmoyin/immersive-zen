@@ -1,0 +1,30 @@
+/* Transparency */
+:root {
+  --zen-colors-tertiary: transparent !important;
+  --zen-settings-secondary-background: transparent !important;
+  --in-content-page-background: transparent !important;
+  --background-color-box: hsla(0, 0%, 100%, 0.08) !important;
+}
+
+@-moz-document url(about:config) {
+  tr,
+  table {
+    background-color: transparent !important;
+    border: none !important;
+  }
+  tr {
+    outline: solid 1px #88888822 !important;
+  }
+}
+
+/* Glass Effect */
+groupbox,
+groupbox button,
+groupbox menulist {
+  background-color: hsla(0, 0%, 100%, 0.08) !important;
+}
+
+/* Imemrsive Popup */
+#mainPrefPane:has(menulist[open]) {
+  filter: blur(20px) !important;
+}
