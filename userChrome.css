@@ -4,6 +4,11 @@
   --zen-branding-bg: transparent !important;
 }
 
+#preferences-root {
+  --zen-colors-tertiary: transparent !important;
+  --zen-settings-secondary-background: transparent !important;
+}
+
 /* Glass Effect */
 :root {
   --zen-dialog-background: hsla(0, 0%, 100%, 0.08) !important;
@@ -45,7 +50,7 @@
   margin-top: var(--zen-element-separation) !important;
 }
 
-/* No Gaps */ 
+/* No Gaps */
 #zen-tabbox-wrapper {
   margin: 0 !important;
 }
