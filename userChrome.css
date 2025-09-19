@@ -31,13 +31,27 @@
 }
 
 /* Immersive Popup */
-:root:has(
-  #navigator-toolbox[has-popup-menu]:not(#navigator-toolbox[movingtab])
-) {
-  #zen-main-app-wrapper,
-  #urlbar {
-    filter: blur(20px) !important;
-    pointer-events: none !important;
+:root {
+  &:has(
+  #navigator-toolbox[has-popup-menu]:not(#navigator-toolbox[movingtab]),
+  #customizationui-widget-multiview > box[panelopen="true"],
+  #downloadsPanel-mainView[visible="true"]
+  ) {
+    #zen-main-app-wrapper,
+    #urlbar {
+      filter: blur(20px) !important;
+    }
+  
+    #titlebar,
+    #zen-appcontent-wrapper {
+      pointer-events: none !important;
+    }
+  }
+  
+  &:has(#tabbrowser-tabpanels > hbox.zen-glance-background) {
+    #tabbrowser-tabpanels > hbox.zen-glance-background {
+      filter: blur(20px) !important;
+    }
   }
 }
 
