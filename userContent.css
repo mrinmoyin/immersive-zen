@@ -5,8 +5,11 @@
   --zen-colors-tertiary: transparent !important;
   --zen-settings-secondary-background: transparent !important;
   --in-content-page-background: transparent !important;
-  --background-color-box: var(--color-highlight) !important;
   --background-color-canvas: transparent !important;
+}
+
+groupbox {
+  background-color: transparent !important;
 }
 
 @-moz-document url(about:config) {
@@ -20,14 +23,48 @@
   }
 }
 
-/* Glass Effect */
+/* Imemrsive Popup */
+:root {
+  --background-color-box: transparent !important;
+}
+
+#mainPrefPane:has(menulist[open]) {
+  filter: blur(20px) !important;
+}
+
+/* Glass Effect */ 
+:root {
+  --background-color-box: var(--color-highlight) !important;
+}
 groupbox,
 groupbox button,
 groupbox menulist {
   background-color: var(--color-highlight) !important;
 }
 
-/* Imemrsive Popup */
-#mainPrefPane:has(menulist[open]) {
-  filter: blur(20px) !important;
+@media only screen and (max-width: 929px) {
+ .navigation:hover {
+    background-color: var(--color-highlight) !important;
+  } 
+}
+
+/* Responsive Settings @ toggle settings nav menu on hover */ 
+@media only screen and (max-width: 929px) {
+  .navigation {
+    position: absolute !important;
+    left: -280px !important;
+    height: 100dvh !important;
+    margin-right: 56px !important;
+    transition: 0.1s ease-in-out
+  }
+  .navigation:hover {
+    left: 0 !important;
+  }
+  
+  #preferences-stack:has(>hbox>.navigation:hover) {
+    .main-content {
+      filter: blur(20px) !important;
+      pointer-events: none !important;
+    }
+  }
 }
