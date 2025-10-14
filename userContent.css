@@ -8,7 +8,8 @@
   --background-color-canvas: transparent !important;
 }
 
-groupbox {
+groupbox, 
+#input {
   background-color: transparent !important;
 }
 
@@ -32,39 +33,89 @@ groupbox {
   filter: blur(20px) !important;
 }
 
-/* Glass Effect */ 
+/* Glass Effect */
 :root {
   --background-color-box: var(--color-highlight) !important;
 }
 groupbox,
 groupbox button,
-groupbox menulist {
+groupbox menulist,
+#input {
   background-color: var(--color-highlight) !important;
 }
 
-@media only screen and (max-width: 929px) {
- .navigation:hover {
+@media only screen and (max-width: 1080px) {
+  .navigation:hover,
+  #sidebar:hover {
     background-color: var(--color-highlight) !important;
-  } 
+  }
 }
 
-/* Responsive Settings @ toggle settings nav menu on hover */ 
-@media only screen and (max-width: 929px) {
-  .navigation {
-    position: absolute !important;
-    left: -280px !important;
-    height: 100dvh !important;
-    margin-right: 56px !important;
-    transition: 0.1s ease-in-out
-  }
-  .navigation:hover {
-    left: 0 !important;
-  }
-  
-  #preferences-stack:has(>hbox>.navigation:hover) {
-    .main-content {
-      filter: blur(20px) !important;
-      pointer-events: none !important;
+/* Responsive Settings @ toggle settings nav menu on hover */
+@media only screen and (max-width: 1080px) {
+  @-moz-document url(about:preferences), url(about:preferences#containers) {
+    .navigation {
+      position: absolute !important;
+      left: -280px !important;
+      height: 100dvh !important;
+      margin-right: 56px !important;
+      transition: 0.1s ease-in-out;
+    }
+    .navigation:hover {
+      left: 0 !important;
+    }
+
+    #preferences-stack:has(> hbox > .navigation:hover) {
+      .main-content {
+        filter: blur(20px) !important;
+        pointer-events: none !important;
+      }
     }
   }
+  
+  @-moz-document url(about:addons) {
+    :root {
+      --page-main-content-width: 100dvw !important;
+    }
+    
+    #sidebar {
+      position: absolute !important;
+      left: -264px !important;
+      height: 100dvh !important;
+      xmargin-right: 56px !important;
+      transition: 0.1s ease-in-out;
+    }
+    #sidebar:hover {
+      left: 0 !important;
+    }
+    
+    #content {
+      width: 100dvw !important;
+      margin-right: 16px !important;
+    }
+    
+    #main {
+      margin-inline: var(--main-margin-start) !important;
+    }
+    
+    .main-search, .main-heading {
+      padding-inline: var(--main-margin-start) !important;
+    }
+
+    #full:has(> #sidebar:hover) {
+      #content {
+        filter: blur(20px) !important;
+        pointer-events: none !important;
+      }
+    }
+  }
+}
+
+/* Misc */
+.pane-container {
+  min-width: unset !important;
+}
+
+addon-page-header > .sticky-container {
+  position: relative !important;
 }
