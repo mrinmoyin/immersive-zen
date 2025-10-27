@@ -39,11 +39,14 @@
   margin: 0 !important;
 }
 
-/* Fix popup menu margins */
+/* Fix popup menu */
 menupopup,
 panel {
   --panel-shadow: none !important;
   --panel-shadow-margin: 0 !important;
+  --arrowpanel-border-radius: 16px !important;
+  --arrowpanel-menuitem-border-radius: 16px !important;
+  --panel-border-color: transparent !important;
 }
 
 /* /* Immersive Sidebar */ */
