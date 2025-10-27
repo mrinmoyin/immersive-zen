@@ -1,6 +1,6 @@
-/* Transparency */
+/* Transparency */ 
 :root {
-  --zen-dialog-background: transparent !important;
+  --zen-dialog-background: #00000001 !important;
   --zen-branding-bg: transparent !important;
 }
 
@@ -9,7 +9,11 @@
   --zen-settings-secondary-background: transparent !important;
 }
 
-/* Glass Effect */
+#navigator-toolbox box {
+  xbackground-color: #00000001 !important;
+}
+
+/* Glass Effect */ /*
 :root {
   --zen-dialog-background: hsla(0, 0%, 100%, 0.08) !important;
 }
@@ -19,41 +23,7 @@
     background-color: hsla(0, 0%, 100%, 0.08) !important;
   }
 }
-
-/* Immersive Sidebar */
-:root[zen-compact-mode="true"]:has(
-    #navigator-toolbox[zen-has-hover],
-    #navigator-toolbox[movingtab]
-  ) {
-  #zen-appcontent-wrapper {
-    filter: blur(20px) !important;
-  }
-}
-
-/* Immersive Popup */
-:root {
-  &:has(
-  #navigator-toolbox[has-popup-menu]:not(#navigator-toolbox[movingtab]),
-  #customizationui-widget-multiview > box[panelopen="true"],
-  #downloadsPanel-mainView[visible="true"]
-  ) {
-    #zen-main-app-wrapper,
-    #urlbar {
-      filter: blur(20px) !important;
-    }
-  
-    #titlebar,
-    #zen-appcontent-wrapper {
-      pointer-events: none !important;
-    }
-  }
-  
-  &:has(#tabbrowser-tabpanels > hbox.zen-glance-background) {
-    #tabbrowser-tabpanels > hbox.zen-glance-background {
-      filter: blur(20px) !important;
-    }
-  }
-}
+*/
 
 /* No Navbar */
 #zen-appcontent-navbar-wrapper {
@@ -68,3 +38,45 @@
 #zen-tabbox-wrapper {
   margin: 0 !important;
 }
+
+/* Fix popup menu margins */
+menupopup,
+panel {
+  --panel-shadow: none !important;
+  --panel-shadow-margin: 0 !important;
+}
+
+/* /* Immersive Sidebar */ */
+/* :root[zen-compact-mode="true"]:has( */
+/*     #navigator-toolbox[zen-has-hover], */
+/*     #navigator-toolbox[movingtab] */
+/*   ) { */
+/*   #zen-appcontent-wrapper { */
+/*     filter: blur(20px) !important; */
+/*   } */
+/* } */
+/**/
+/* /* Immersive Popup */ */
+/* :root { */
+/*   &:has( */
+/*   #navigator-toolbox[has-popup-menu]:not(#navigator-toolbox[movingtab]), */
+/*   #customizationui-widget-multiview > box[panelopen="true"], */
+/*   #downloadsPanel-mainView[visible="true"] */
+/*   ) { */
+/*     #zen-main-app-wrapper, */
+/*     #urlbar { */
+/*       filter: blur(20px) !important; */
+/*     } */
+/*    */
+/*     #titlebar, */
+/*     #zen-appcontent-wrapper { */
+/*       pointer-events: none !important; */
+/*     } */
+/*   } */
+/*    */
+/*   &:has(#tabbrowser-tabpanels > hbox.zen-glance-background) { */
+/*     #tabbrowser-tabpanels > hbox.zen-glance-background { */
+/*       filter: blur(20px) !important; */
+/*     } */
+/*   } */
+/* } */
